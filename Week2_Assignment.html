@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+    <style>
+        fieldset {
+            border:purple;
+            border-width: 3px;
+            border-radius: 12px;
+            border-style: solid;
+            margin-bottom:10px;
+            width:320px;
+        }
+        label {
+            display:inline-block;
+            text-align: left;
+            vertical-align: top;
+            font-weight: bold;
+
+        }  
+        label [for="contactmethod"], label [for="gender"] {
+            width: auto;
+        }
+        .autowidth {
+            width: auto;
+            display: inline-block;
+            text-align:center;
+        }
+        .aligncenterlow {
+            display:inline-block;
+            text-align: center;
+            background: purple;
+            width: 50px;
+            color:white; 
+        }
+        .aligncenterhigh {
+            display:inline-block;
+            text-align: center;
+            background: purple;
+            width:50px;
+            color:white;
+        }
+        input {
+            width:100%;
+            
+        }
+        .widthrel{
+            width:3%;
+        }
+        .widthrel2 {
+            width:7%
+        }
+        input[type='range']{
+            display:inline-block;
+            vertical-align: top;
+            width:50%;
+        }
+        input[type="submit"] {
+            background-color:rgb(55, 131, 179);
+            color:white;
+            height:30px;
+            text-align:center;
+            width:200px;
+        }
+        body {
+            background-image: radial-gradient(circle, rgb(26, 26, 202), purple);
+            background-size:cover;
+            background-repeat:none;
+            background-position:center;
+            text-align: center;
+            font-size: 12px;
+        }
+        form{
+            display: inline-block;
+            background: white;
+            border-radius: 18px;
+            padding: 35px;
+            padding-top:20px;
+            padding-bottom:40px;
+            
+        }
+        h1 {
+            color:white;
+            font-size: 20px;
+            text-align: center;
+        }
+        legend {
+            color: white;
+            background: purple;
+            border-radius: 10px;
+            height:15px;
+            padding: 10px;
+            text-align: left;
+            margin-left: 10%;
+        }
+
+
+    </style>
+    <div style="display: inline-block; text-align: left">
+    <h1>Please Enter Your Details for Our Dating Website</h1><br>
+    <form action="https://learn.nucamp.co/show_everything.php" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Your Face</legend><br>
+            <label for="avatar">Your Image:</label><br><br>
+                <input type="file" id="avatar" name="avatar"><br><br>
+            <label for="preview">Image Preview:</label>
+                <img width="200px" id="preview" name="preview">
+        </fieldset>    
+        <fieldset>
+            <legend>Your General Details</legend><br>
+            <label for="name">Name:</label><br>
+                <input type="text" required name="name" id="name" placeholder="Your full name"><br><br>
+            <label for="gender">Gender:</label>
+                <input class="widthrel" type="radio" required name="gender" id="Male" value="Male" ><span class="autowidth">Male</span>
+                <input class="widthrel" type="radio" required name="gender" id="Female" value="Female"><span class="autowidth">Female</span><br><br>
+            <label for="age">Age:</label><br>
+                <input type="number" required name="age" id="age"><br><br>
+            <label for="dob">Date of Birth:</label><br>
+                <input type="date" required name="dob" id="dob"><br><br>
+            <label for="color">Favorite Color:</label>
+                <input class="widthrel2" type="color" required name="color" id="color"><br><br>
+            <label for="country">Which Country:</label>
+                <select>
+                    <option name="country" value="United States">United States</option>
+                    <option name="country" value="Mexico">Mexico</option>
+                    <option name="country" value="India">India</option>
+                    <option name="country" value="Canada">Canada</option>
+                    <option name="country" value="France">France</option>
+                    <option name="country" value="No Selection">No Selection</option>
+                </select>
+        </fieldset>
+        <fieldset>
+            <legend>Your Indicators</legend><br>
+                <label for="height">Height:</label>
+                    <span class="aligncenterlow">Short</span><input name="height" type="range" min="0" max="100"><span class="aligncenterhigh">Tall</span><br><br>
+                <label for="salary">Salary:</label>
+                    <span class="aligncenterlow">Poor</span><input name="salary" type="range" min="0" max="100"><span class="aligncenterhigh">Rich</span>
+        </fieldset>
+        <fieldset>
+            <legend>Your Contact Information</legend><br>
+                <label for="email">Email:</label>
+                    <input type="email" required name="email" id="email"><br><br>
+                <label for="mobile">Mobile:</label>
+                    <input type="tel" required name="mobile" id="mobile"><br><br>
+                <label for="address">Address:</label><br>
+                    <textarea name="address" id="address" col="20" row="3"></textarea><br><br>
+                <label for="contactmethod">Method to contact you:</label>
+                    <input class="widthrel" type="checkbox" name="contactmethod" id="Emailcontact" value="Emailcontact"><span class="autowidth">Email</span>
+                    <input class="widthrel" type="checkbox" name="contactmethod" id="Whatsapp" value="Whatsapp"><span class="autowidth">Whatsapp</span>
+                    <input class="widthrel" type="checkbox" name="contactmethod" id="In-app chat" value="In-app chat"><span class="autowidth">In-app chat</span>
+        </fieldset>
+        <input type="submit">
+    </form>
+    </div>
+    <script src="https://url.nucamp.co/datingjs"></script>
+</body>
+
+</html>
